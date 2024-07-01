@@ -51,6 +51,19 @@ int main(){
 */
 
 int main(){
-	
+	//freopen("input.txt", "rt", stdin);
+	int n, a, max = INT_MIN, min = INT_MAX;
+	cin>>n;
+	for(int i = 1; i <= n; i++)
+	{
+		cin>>a;
+		if(a>max){
+			max = a;
+		}
+		if(a<min){
+			min = a;
+		}
+	}
+	cout << max - min;
 	return 0;	
 }
