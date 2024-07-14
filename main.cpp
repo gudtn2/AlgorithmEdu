@@ -164,6 +164,7 @@ int main(){
  } 
  */
  
+ /* 10¹ø 
  int digit_sum(int x){
  	int tmp, sum = 0;
  	while(x > 0){
@@ -190,5 +191,21 @@ int main(){
 		}
 	 }
  	printf("%d\n", res);
+ 	return 0;
+ } 
+ */
+ 
+ int main(){
+ 	int n, tmp, sum = 0;
+ 	scanf("%d", &n);
+	for(int i = 1; i <= n; i++){
+		tmp = i;
+		while(tmp > 0){
+			sum += 1;
+			tmp = tmp / 10;
+		}
+	}
+	printf("%d", sum);
+ 	
  	return 0;
  } 
