@@ -212,6 +212,7 @@ int main(){
  } 
  */
  
+ /* 12¹ø 
  int main(){
  	int n, sum = 0, c = 1, d = 9, res = 0;
  	scanf("%d", &n);
@@ -223,6 +224,27 @@ int main(){
 	 }
 	 res = res + ((n-sum) * c);
 	 printf("%d\n", res);
+ 	
+ 	return 0;
+ }
+ */
+ 
+ int ch[10];
+ int main(){
+ 	int digit, max = -2147000000, res;
+ 	char a[101];
+ 	scanf("%s", &a);
+ 	for(int i = 0; a[i] != '\0'; i++){
+ 		digit = a[i] - 48;
+ 		ch[digit]++;
+	 }
+	for(int i = 0; i <= 9; i++){
+		if(ch[i] >= max){
+			max = ch[i];
+			res = i;
+		}
+	}
+	printf("%d\n", res);
  	
  	return 0;
  }
