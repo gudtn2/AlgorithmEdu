@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <algorithm>
 
 using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -287,6 +288,7 @@ int main(){
  }
  */
  
+ /* 15번 
  int main(){
  	int n, i, j, flag, cnt = 0;
  	scanf("%d", &n);
@@ -304,3 +306,35 @@ int main(){
  	
  	return 0;
  } 
+ */
+ // 알파벳의 아스키코드를 사용  
+ // 대문자 아스키코드 65 ~ 90 소문자 97 ~ 122 
+ // 대문자 배열이 26까지 이므로 소문자 배열이 27부터 오도록 -70 
+ int a[60], b[60]; 
+ int main(){ 
+ 	char str[100];
+ 	int i;
+ 	scanf("%s", &str);
+ 	for(i = 0; str[i] != '\0'; i++){ 
+ 		if(str[i] >= 65 && str[i] <= 90){
+ 			a[str[i] - 64]++;
+		 }
+		 else a[str[i] - 70]++;
+	 }
+	scanf("%s", &str);
+ 	for(i = 0; str[i] != '\0'; i++){
+ 		if(str[i] >= 65 && str[i] <= 90){
+ 			b[str[i] - 64]++;
+		 }
+		 else b[str[i] - 70]++;
+	 }
+ 	for(i = 1; i <= 52; i++){
+ 		if(a[i] != b[i]){
+ 			printf("NO\n");
+ 			exit(0);
+		 }
+	 }
+	 printf("YES\n");
+ 	
+ 	return 0;
+ }
