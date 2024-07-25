@@ -307,6 +307,8 @@ int main(){
  	return 0;
  } 
  */
+ 
+ /*
  // 알파벳의 아스키코드를 사용  
  // 대문자 아스키코드 65 ~ 90 소문자 97 ~ 122 
  // 대문자 배열이 26까지 이므로 소문자 배열이 27부터 오도록 -70 
@@ -335,6 +337,24 @@ int main(){
 		 }
 	 }
 	 printf("YES\n");
+ 	
+ 	return 0;
+ }
+ */
+ 
+ int main(){
+ 	int n, sum = 0, i, j, m, ans; 	
+ 	scanf("%d", &n);
+ 	
+ 	for(i = 1; i <= n; i++){
+		scanf("%d %d", &m, &ans);
+		sum = 0; // sum을 초기화 해줄것  
+		for(j = 1; j <= m; j++){
+			sum += j;
+		}
+		if(ans == sum) printf("YES\n");
+		else printf("NO\n");
+	 } 	
  	
  	return 0;
  }
