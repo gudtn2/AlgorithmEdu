@@ -308,7 +308,7 @@ int main(){
  } 
  */
  
- /*
+ /* 16번  
  // 알파벳의 아스키코드를 사용  
  // 대문자 아스키코드 65 ~ 90 소문자 97 ~ 122 
  // 대문자 배열이 26까지 이므로 소문자 배열이 27부터 오도록 -70 
@@ -342,6 +342,7 @@ int main(){
  }
  */
  
+ /* 17번  
  int main(){
  	int n, sum = 0, i, j, m, ans; 	
  	scanf("%d", &n);
@@ -358,3 +359,20 @@ int main(){
  	
  	return 0;
  }
+ */
+ 
+ int main(){
+	int n, a, val, i, cnt = 0, max = -2147000000;
+	scanf("%d %d", &n, &val);
+	for(i = 1; i <= n; i++){
+		scanf("%d", &a);
+		if(a > val) cnt++;
+		else cnt = 0;
+		if(cnt > max) max = cnt;
+	}
+	
+	if(max == 0) printf("-1\n");
+	else printf("%d\n", max);
+ 	return 0;
+}
+
