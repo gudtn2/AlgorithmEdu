@@ -361,6 +361,7 @@ int main(){
  }
  */
  
+ /* 18¹ø 
  int main(){
 	int n, a, val, i, cnt = 0, max = -2147000000;
 	scanf("%d %d", &n, &val);
@@ -375,4 +376,23 @@ int main(){
 	else printf("%d\n", max);
  	return 0;
 }
+*/
 
+int main(){
+	int n, a[100], max, ans = 0;
+	
+	scanf("%d", &n);
+	for(int i = 1; i <= n; i++){
+		scanf("%d", &a[i]);
+	}
+	max = a[n];
+	for(int i = n - 1; i >= 1; i--){
+		if(a[i] > max){
+			max = a[i];
+			ans++;
+		}
+	}
+	printf("%d", ans);
+	
+	return 0;
+}
