@@ -378,6 +378,7 @@ int main(){
 }
 */
 
+/* 19¹ø 
 int main(){
 	int n, a[100], max, ans = 0;
 	
@@ -393,6 +394,27 @@ int main(){
 		}
 	}
 	printf("%d", ans);
+	
+	return 0;
+}
+*/
+
+int main(){
+	int n, x[101], y[101];
+	scanf("%d", &n);
+	for(int i = 1; i <= n; i++){
+		scanf("%d", &x[i]);
+	}	
+	for(int i = 1; i <= n; i++){
+		scanf("%d", &y[i]);
+	}
+	for(int i = 1; i<= n; i++){
+		if(x[i] == y[i]) printf("D\n");
+		else if(x[i] == 1 && y[i] == 3) printf("A\n");
+		else if(x[i] == 2 && y[i] == 1) printf("A\n");
+		else if(x[i] == 3 && y[i] == 2) printf("A\n");
+		else printf("B\n");
+	}
 	
 	return 0;
 }
