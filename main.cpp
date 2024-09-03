@@ -399,6 +399,7 @@ int main(){
 }
 */
 
+/* 20¹ø 
 int main(){
 	int n, x[101], y[101];
 	scanf("%d", &n);
@@ -415,6 +416,43 @@ int main(){
 		else if(x[i] == 3 && y[i] == 2) printf("A\n");
 		else printf("B\n");
 	}
+	
+	return 0;
+}
+*/
+
+int main(){
+	int A[10], B[10], as = 0, bs = 0, lw = 0;
+	for(int i = 0; i < 10; i++){
+		scanf("%d", &A[i]);
+	}
+	for(int i = 0; i < 10; i++){
+		scanf("%d", &B[i]);
+	}
+	
+	for(int i = 0; i < 10; i++){
+		if(A[i] > B[i]){
+			as += 3;
+			lw = 1;
+		}
+		else if(A[i] < B[i]){
+			bs += 3;
+			lw = 2;
+		}
+		else{
+			as += 1;
+			bs += 1;
+		}
+	}
+	
+	printf("%d %d\n", as, bs);
+	if(as == bs){
+		if(lw == 0) printf("D\n");
+		else if(lw == 1) printf("A\n");
+		else printf("B\n");
+	}
+	else if(as > bs) printf("A\n");
+	else printf("B\n");
 	
 	return 0;
 }
