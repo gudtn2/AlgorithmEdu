@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -421,6 +422,7 @@ int main(){
 }
 */
 
+/* 21¹ø 
 int main(){
 	int A[10], B[10], as = 0, bs = 0, lw = 0;
 	for(int i = 0; i < 10; i++){
@@ -453,6 +455,30 @@ int main(){
 	}
 	else if(as > bs) printf("A\n");
 	else printf("B\n");
+	
+	return 0;
+}
+*/
+
+
+int main(){
+	int n, k, sum = 0, max;
+	scanf("%d %d", &n, &k);
+	std::vector<int> a(n);
+	for(int i = 0; i < n; i++){
+		scanf("%d", &a[i]);
+	}
+	for(int i = 0; i < k; i++){
+		sum += a[i];
+	}
+	max = sum;
+	for(int i = k; i < n; i++){
+		sum = sum + (a[i] - a[i - k]);
+		if(sum > max){
+			max = sum;
+		}
+	}	
+	printf("%d\n", max);
 	
 	return 0;
 }
