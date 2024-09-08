@@ -460,7 +460,7 @@ int main(){
 }
 */
 
-/*
+/* 22번 
 int main(){
 	int n, k, sum = 0, max;
 	scanf("%d %d", &n, &k);
@@ -484,6 +484,7 @@ int main(){
 }
 */
 
+/* 23번 
 int main(){
 	int n, i, pre, now, cnt, max;
 	scanf("%d", &n);
@@ -501,6 +502,28 @@ int main(){
 		pre = now;
 	}
 	printf("%d\n", max);
+	
+	return 0;
+}
+*/
+
+int main(){
+	int n, i, now, pre, pos;
+	scanf("%d", &n);
+	vector<int> ch(n);
+	scanf("%d", &pre);
+	for(i =1; i < n; i++){
+		scanf("%d", &now);
+		pos = abs(pre - now); // abs() 절대값함수 
+		if(pos > 0 && pos < n && ch[pos] == 0) ch[pos] = 1;
+		else{
+			printf("NO");
+			return 0;
+		}
+		pre = now;
+	}
+	
+	printf("YES");
 	
 	return 0;
 }
