@@ -507,6 +507,7 @@ int main(){
 }
 */
 
+/* 24¹ø 
 int main(){
 	int n, i, now, pre, pos;
 	scanf("%d", &n);
@@ -524,6 +525,27 @@ int main(){
 	}
 	
 	printf("YES");
+	
+	return 0;
+}
+*/
+
+int main(){
+	int i, j, a[200], b[200], n;
+	scanf("%d", &n);
+	for(i = 1; i <= n; i++){
+		scanf("%d", &a[i]);
+		b[i] = 1;	
+	}
+	for(i = 1; i <= n; i++){
+		for(j = 1; j <= n; j++){
+			if(a[i] < a[j]){
+				b[i] += 1;
+			}
+		}
+		printf("%d ", b[i]);
+	}
+	
 	
 	return 0;
 }
