@@ -530,6 +530,7 @@ int main(){
 }
 */
 
+/* 25¹ø 
 int main(){
 	int i, j, a[200], b[200], n;
 	scanf("%d", &n);
@@ -549,3 +550,23 @@ int main(){
 	
 	return 0;
 }
+*/
+
+int main(){
+	int i, j, n, cnt = 0;
+	scanf("%d", &n);
+	vector<int> a(n + 1);
+	for(i = 1; i <= n; i++){
+		scanf("%d", &a[i]);
+	}
+	printf("1 ");
+	for(i = 2; i <= n; i++){
+		cnt = 0;
+		for(j = i - 1; j >= 1; j--){
+			if(a[j] >= a[i]) cnt++;
+		}
+		printf("%d ", cnt + 1);
+	}
+	
+	return 0;
+} 
