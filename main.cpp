@@ -573,6 +573,7 @@ int main(){
 } 
 */
 
+/* 27¹ø 
 int main(){
 	int i, j, n, tmp;
 	scanf("%d", &n);
@@ -593,6 +594,29 @@ int main(){
 	for(i = 2; i <= n; i++){
 		if(ch[i] != 0) printf("%d ", ch[i]);
 	}
+	
+	return 0;
+}
+*/
+
+int main(){
+	int n, i, j, tmp, cnt1 = 0, cnt2 = 0;
+	scanf("%d", &n);
+	for(i = 2; i <= n; i++){
+		tmp = i;
+		j = 2;
+		while(1){
+			if(tmp % j == 0){
+				if(j == 2) cnt1++;
+				else if(j == 5) cnt2++;
+				tmp = tmp / j;
+			}
+			else j++;
+			if(tmp == 1) break;
+		}
+	}
+	if(cnt1 < cnt2) printf("%d\n", cnt1);
+	else printf("%d\n", cnt2);	
 	
 	return 0;
 }
