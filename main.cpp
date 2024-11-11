@@ -599,6 +599,7 @@ int main(){
 }
 */
 
+/* 28¹ø 
 int main(){
 	int n, i, j, tmp, cnt1 = 0, cnt2 = 0;
 	scanf("%d", &n);
@@ -617,6 +618,23 @@ int main(){
 	}
 	if(cnt1 < cnt2) printf("%d\n", cnt1);
 	else printf("%d\n", cnt2);	
+	
+	return 0;
+}
+*/
+
+int main(){
+	int n, tmp, i, cnt = 0, digit;
+	scanf("%d", &n);
+	for(i = 1; i <= n; i++){
+		tmp = i;
+		while(tmp > 0){
+			digit = tmp % 10;
+			if(digit == 3) cnt++;
+			tmp = tmp / 10;
+		}
+	}
+	printf("%d\n", cnt);	
 	
 	return 0;
 }
